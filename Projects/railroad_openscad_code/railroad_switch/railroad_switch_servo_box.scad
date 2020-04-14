@@ -36,8 +36,10 @@ micro_cylinder_diameter = 6;
 //build_railroad_servo_switch(7, 11, 1,false);
 
 //build_railroad_servo_box_bottom(5, 5);
-build_railroad_servo_box_top(5, 5);
+//build_railroad_servo_box_top(5, 5);
 //servo_model(servoWidth, servoLength, servoHeight);
+lid();
+
 
 //railroad_part_1();
 //railroad_part_2(7, 11, 1,false);
@@ -182,14 +184,13 @@ module build_railroad_servo_box_top(a, b)
                 servo_model(servoWidth, servoLength, servoHeight);    
             }  
     }
-    translate([(vemos_width) / 2, servoHeight+2.05 , servo_box_shell_height]) 
+    translate([ (lego_plate_outer_length_x * b) / 2, (lego_plate_outer_length_x * a) / 2, servo_box_shell_height]) 
     {
         rotate([0, 0, 180]) 
         {
-        base(0,0,0);        
+        base();        
         }
     }
-    
 }
 
 module servo_box_shell(a, b)
@@ -205,7 +206,7 @@ module servo_model(x, y, h)
             translate([-((servo_screw_mount_length-x)/2), 0, 15.3]) 
             {
                 // Screw mount for servo
-                #cube(size=[servo_screw_mount_length, y, 3]);
+                cube(size=[servo_screw_mount_length, y, 3]);
             }
             translate([(servoLength/2), (servoLength/2), servoHeight]) 
             {
