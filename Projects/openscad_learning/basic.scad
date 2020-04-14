@@ -1,0 +1,13 @@
+//include <test.scad>
+//include <objects.scad>
+//include <unionMethod.scad>
+//include <differenceMethod.scad>
+//include <scaling.scad>
+//include <mirror.scad>
+//include <rotateMethod.scad>
+//include <intersectionMethod.scad>
+//include <railroadSwitchBottonPlate.scad>
+//include <railroadSwitchBox.scad>
+//include <railroadSwitchTopBox.scad>
+//include <C:\Users\oerte\Documents\Projects\3DPrintProjects\Projects\LegoTrain\LegoTrainBasicCode\LegoGeneral.scad>
+include <magnetBrick.scad>

@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# Gather constant vars
+CURRENTDIR=`pwd`
+GITHUBUSER=`git config user.name`
+
+echo $CURRENTDIR
+echo $GITHUBUSER
+
+git pull
+git add .
+git commit -m "added new file through bash script"
+git status
+

@@ -1,0 +1,4 @@
+Sources for ENDER 3 Belt tensioner
+
+fooyabt -  fessyFOO's Yet Another Belt Tensioner (https://www.thingiverse.com/thing:2502801)
+TronXY X1 Y axis Belt Tensioner (https://www.thingiverse.com/thing:2870938)
