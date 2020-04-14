@@ -1,4 +1,4 @@
-include <../lego_factory/lego_manifacture.scad>
+include <D:\3D_prints\Projects\railroad_openscad_code\lego_factory\lego_manifacture.scad>
 
 //Magnets for registrering train travel
 magnet_x = 10.4;

@@ -33,7 +33,7 @@ micro_cylinder_diameter = 6;
 
 //===========================
 
-//build_railroad_servo_switch(7, 11, 1,false);
+build_railroad_servo_switch(7, 11, 1,false);
 
 //build_railroad_servo_box_bottom(5, 5);
 //build_railroad_servo_box_top(5, 5);

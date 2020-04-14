@@ -19,8 +19,8 @@ clickLength = 1.9;
 clickWidth = 1.9;
 clickHeights = 3;
 
-//rightPin();
-leftPin();
+rightPin();
+//leftPin();
 
 // building the two pins 
 module rightPin()
