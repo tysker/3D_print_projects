@@ -38,7 +38,7 @@ micro_cylinder_diameter = 6;
 //build_railroad_servo_box_bottom(5, 5);
 //build_railroad_servo_box_top(5, 5);
 //servo_model(servoWidth, servoLength, servoHeight);
-lid();
+//lid();
 
 
 //railroad_part_1();
@@ -188,7 +188,7 @@ module build_railroad_servo_box_top(a, b)
     {
         rotate([0, 0, 180]) 
         {
-        base();        
+        base(0);        
         }
     }
 }

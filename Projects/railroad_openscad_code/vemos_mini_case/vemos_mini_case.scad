@@ -18,7 +18,7 @@ hole_diameter = 7.0;
 slit_width = 4.0;
 slit_height = 23.0;
 
-//base();
+//base(0);
 //lid();
 
 // lid
@@ -40,22 +40,22 @@ module lid()
 }
 
 // base
-module base()
+module base(h)
 {
     union() 
     {
         translate([13.5, -(cavity_length / 2.0), thickness]) cube([4.0, cavity_length, 4.0]);
-        translate([-16, -((cavity_length/2) / 2.0), 2])cube([4.0, cavity_length/2, 2.0]);
+        translate([-16, -((cavity_length/2) / 2.0), 2]) cube([4.0, cavity_length/2, 2.0]);
 
         difference () 
         {
-            translate([0, 0, vemos_height / 2.0]) cube([vemos_width, vemos_length, vemos_height], center = true); 
-            translate([0, 0, ((cavity_height) / 2.0) + thickness]) cube([cavity_width, cavity_length, cavity_height], center = true);
-            translate([1, 0, (thickness - 1)]) #cylinder(h = thickness + fudge, r1 = hole_diameter, r2 = hole_diameter, center = true);
-            rotate([0, 0, 90]) translate([9, -12.5, 0]) cube([slit_width, slit_height, 5]);
-            rotate([0, 0, 90]) translate([-13, -12.5, 0]) cube([slit_width, slit_height, 5]);
-            translate([(-20), -6, 1]) cube([3, 12, 12]);
-            translate([-17.25, -16.0, 5]) cube([7, 4, 4]);        
+            translate([0, 0, (vemos_height + h) / 2.0]) cube([vemos_width, vemos_length, vemos_height + h], center = true); 
+            translate([0, 0, ((cavity_height + h) / 2.0) + thickness]) cube([cavity_width, cavity_length, cavity_height + h], center = true);
+            translate([1, 0, (thickness - 1)]) cylinder(h = thickness + fudge + h, r1 = hole_diameter, r2 = hole_diameter, center = true);
+            rotate([0, 0, 90]) translate([9, -12.5, -h]) cube([slit_width, slit_height, 5 + h]);
+            rotate([0, 0, 90]) translate([-13, -12.5, -h]) cube([slit_width, slit_height, 5 + h]);
+            translate([(-20), -6, 1]) cube([3, 12, 12 + h]);
+            translate([-17.25, -16.0, 5 + h]) cube([7, 4, 4]);        
         }
     }
 }

@@ -24,7 +24,7 @@ plate_height = 3.35;
 /*
 Info
 
-"build_lego_piece( x, y , layers, boolean;
+build_lego_piece( x, y , layers, boolean)
 
 layers can only be 1 or 2.
 If x or y is less than 3, there will be no studs at the bottom
