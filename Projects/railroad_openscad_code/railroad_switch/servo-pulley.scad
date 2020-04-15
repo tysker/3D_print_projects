@@ -11,19 +11,23 @@ mdpart_y = 7.45;
 /*
 rtpart = right_part
 */
-rtpart_diameter = 7.85;
-rtpart_z = 14.98;
+rtpart_diameter = 6.85;
+rtpart_z = 13.5;
 /*
 ltpart = left_part
 */
 ltpart_diameter = rtpart_diameter;
-ltpart_z = 9.20;
+ltpart_z = 10.5;
+ltpart_cutter_height = 5;
 
 build_pulley();
 //collect_pulley_parts();
 //build_middel_part();
 //build_right_part();
 //build_left_part();
+//right_part_cutter_1();
+//right_part_cutter_2();
+//left_part_cutter();
 
 module build_pulley() 
 {
@@ -34,11 +38,15 @@ module build_pulley()
       {
          right_part_cutter_1();
       }
+      translate([0, 0, -(ltpart_z - mdpart_x ) - 0.2]) 
+      {
+        #left_part_cutter();    
+      }
   }  
-  translate([mdpart_z, 0, 9]) 
+  translate([mdpart_z, 0, 7.5]) 
     {
         right_part_cutter_2();
-    }  
+    } 
 }
 
 module collect_pulley_parts() 
@@ -64,7 +72,7 @@ module build_right_part()
 
 module right_part_cutter_1()
 {
-    cylinder(d=rtpart_diameter - 1.67, h=rtpart_z + 1);
+    cylinder(d=4.83, h=rtpart_z + 1);
 }
 
 module right_part_cutter_2()
@@ -88,6 +96,11 @@ module build_left_part()
     {
         cylinder(d= ltpart_diameter, h=ltpart_z);
     }
+}
+
+module left_part_cutter()
+{
+    cylinder(d=4.2, h=ltpart_cutter_height);
 }
 
 /*
