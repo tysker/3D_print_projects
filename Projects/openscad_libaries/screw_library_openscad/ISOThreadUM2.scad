@@ -16,7 +16,7 @@ WrenchSizes=0;	// =0= Rolson sizes, =1=Fairbury sizes
 //hex_nut(8);							// make an M8 ISO nut
 //hex_bolt(6,12);						// make an M6 x 12 ISO bolt
 //hex_nut(6);							// make an M6 ISO nut
-thread_out(10,20);					// make an M8 x 16 ISO thread
+//thread_out(10,20);					// make an M8 x 16 ISO thread
 //thread_out_centre(8,16);				// make a centre for an M8 x 16 ISO thread
 //thread_out_pitch(8,16,1.0);			// make an M8 x 16 thread with 1 mm pitch
 //thread_out_centre_pitch(8,16,0.5);	// make the centre for an M8 x 16 thread with 1 mm pitch
