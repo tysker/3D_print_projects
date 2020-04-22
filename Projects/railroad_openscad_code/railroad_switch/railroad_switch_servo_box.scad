@@ -54,7 +54,7 @@ module build_railroad_servo_switch(a, b, c, boolean)
     railroad_part_1();
     railroad_part_2(a, b, c, boolean);
 
-    translate([lego_plate_outer_length_x * 2, lego_plate_outer_length_x * 6 , 0]) 
+    translate([lego_plate_outer_length_x * 1, (lego_plate_outer_length_x * 6), 0]) 
     {
         build_railroad_servo_box_bottom(5, 5);
     }

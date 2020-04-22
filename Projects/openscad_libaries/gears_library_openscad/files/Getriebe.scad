@@ -34,6 +34,8 @@ Erlaubte Module nach DIN 780:
 
 */
 
+//zahnstange(0.5,10,20,10);
+//stirnrad(0.1,100,5,1);
 
 // Allgemeine Variablen
 pi = 3.14159;
@@ -100,7 +102,6 @@ module kopiere(vect, zahl, abstand, winkel){
 				children(0);
 	}
 }
-
 /*  Zahnstange
     modul = Höhe des Zahnkopfes über der Wälzgeraden
     laenge = Länge der Zahnstange

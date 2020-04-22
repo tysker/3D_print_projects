@@ -1,3 +1,4 @@
+include <D:\3D_prints\Projects\openscad_libaries\gears_library_openscad\files\Getriebe.scad>
 $fn=128;
 /*
 mdpart = middel_part
@@ -5,20 +6,20 @@ x = x axis
 y = y axis
 z = z axis
 */
-mdpart_z = 21.34;
+mdpart_z = 14.34;
 mdpart_x = 8.30;
-mdpart_y = 7.45;
+mdpart_y = 8.5;
 /*
 rtpart = right_part
 */
-rtpart_diameter = 6.85;
+rtpart_diameter = 8;
 rtpart_z = 13.5;
 /*
 ltpart = left_part
 */
 ltpart_diameter = rtpart_diameter;
 ltpart_z = 10.5;
-ltpart_cutter_height = 5;
+ltpart_cutter_height = 6;
 
 build_pulley();
 //collect_pulley_parts();
@@ -28,6 +29,7 @@ build_pulley();
 //right_part_cutter_1();
 //right_part_cutter_2();
 //left_part_cutter();
+
 
 module build_pulley() 
 {
@@ -40,7 +42,11 @@ module build_pulley()
       }
       translate([0, 0, -(ltpart_z - mdpart_x ) - 0.2]) 
       {
-        #left_part_cutter();    
+        left_part_cutter();    
+      }
+      translate([mdpart_z, 0, 9.6]) 
+      {
+        stirnrad(0.17,30,4,1);    
       }
   }  
   translate([mdpart_z, 0, 7.5]) 
@@ -72,7 +78,7 @@ module build_right_part()
 
 module right_part_cutter_1()
 {
-    cylinder(d=4.83, h=rtpart_z + 1);
+    cylinder(d=4.5, h=rtpart_z + 1);
 }
 
 module right_part_cutter_2()
@@ -100,7 +106,7 @@ module build_left_part()
 
 module left_part_cutter()
 {
-    cylinder(d=4.2, h=ltpart_cutter_height);
+    cylinder(d=3.5, h=ltpart_cutter_height);
 }
 
 /*
