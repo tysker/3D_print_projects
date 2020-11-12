@@ -35,9 +35,9 @@ boolean = true: The lego_plate_top is filled out
 boolean = false: The lego_plate_top is hollow at the bottom
 */
 
-//build_lego_piece_with_both_top_and_bottom_studs(2,2,1, true);
+//build_lego_piece_with_both_top_and_bottom_studs(10,10,2, false);
 //build_lego_piece_with_only_top_studs(2,2,1, false);
-//build_lego_piece_with_only_bottom_studs(1,4,1, true);
+//build_lego_piece_with_only_bottom_studs(4,4,1, true);
 
 module build_lego_piece_with_both_top_and_bottom_studs(a, b, c, boolean)
 {
